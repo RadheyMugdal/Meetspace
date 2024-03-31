@@ -52,6 +52,9 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+.cl-providerIcon__github{
+  filter: invert(1);
+}
 
 /* ==== clerk class override ===== */
 
