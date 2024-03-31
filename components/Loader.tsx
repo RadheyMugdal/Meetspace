@@ -1,10 +1,13 @@
-import Image from 'next/image'
+"use client"
+import { Spinner } from "flowbite-react";
+
 
 const Loader = () => {
   return (
-    <div className=' flex-center h-screen w-screen'>
-      <Image src='/icons/loading-circle.svg' alt='loading' width={50} height={50} />
+    <div className=" h-screen w-full flex justify-center items-center">
+      <Spinner color="info" aria-label="Info spinner example" className=" h-11 w-11 m-auto" />
     </div>
+
   )
 }
 
