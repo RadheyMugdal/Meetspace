@@ -55,6 +55,12 @@
 .cl-providerIcon__github{
   filter: invert(1);
 }
+.cl-internal-sr03kg{
+  display: none;
+}
+.cl-internal-1v4f1h0{
+  margin: auto;
+}
 
 /* ==== clerk class override ===== */
 
