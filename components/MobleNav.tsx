@@ -1,10 +1,10 @@
 "use client"
 import { sidebarLinks } from "@/Constants"
 import {
-    Sheet,
-    SheetClose,
-    SheetContent,
-    SheetTrigger
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger
 } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
@@ -31,7 +31,7 @@ const MobleNav = () => {
          sidebarLinks.map((link)=>{
           const isActive = pathname === link.route 
           return (
-            <SheetClose asChild> 
+            <SheetClose asChild key={link.label}> 
             <Link href={link.route} key={link.label} className={cn('flex gap-4 items-center p-4 rounded-lg w-full max-w-60',{'bg-blue-1 ': isActive,})}>
               
               <Image src={link.imageUrl} alt={link.label} width={20} height={20} />
