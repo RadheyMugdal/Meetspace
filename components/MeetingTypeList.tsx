@@ -7,6 +7,7 @@ import { useState } from "react"
 import ReactDatePicker from 'react-datepicker'
 import HomeCard from "./HomeCard"
 import MeetingModel from "./MeetingModel"
+import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 import { useToast } from "./ui/use-toast"
 
@@ -93,6 +94,9 @@ const MeetingTypeList = () => {
         />
       )}
       <MeetingModel isOpen={meetingState==='isInstantMeeting'} onClose={()=>setMeetingState(undefined)} title="Start an Instant Meeting" className="text-center" buttonText="Start Meeting" handleClick={createMeeting} />
+      <MeetingModel isOpen={meetingState==='isJoiningMeeting'} onClose={()=>setMeetingState(undefined)} title="Enter the link here" className="text-center" buttonText="Join Meeting" handleClick={()=>router.push(values.link)} >
+        <Input placeholder="Meeting link" className=" border-none bg-dark-3  focus-visible:ring-0 focus-visible:ring-offset-0" onChange={(e)=>setValues({...values,link:e.target.value})}/>
+      </MeetingModel>
     </section>
   )
 }
