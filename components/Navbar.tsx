@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className=" flex-between gap-5">
         {/* clerk user management */}
         <SignedIn>
-          <UserButton afterSignOutUrl={process.env.NEXT_PUBLIC_BASE_URL} />
+          <UserButton afterSignOutUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL} />
         </SignedIn>
         
         <MobleNav/>
